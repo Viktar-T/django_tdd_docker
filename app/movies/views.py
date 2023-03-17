@@ -1,14 +1,13 @@
-from django.shortcuts import render, get_object_or_404
-from rest_framework import status, permissions
+from django.shortcuts import get_object_or_404, render
+from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .serializers import MovieSerializer
 from .models import Movies
+from .serializers import MovieSerializer
 
 
 class MovieList(APIView):
-
     def get(self, request):
         object = Movies.objects.all()
         serializer = MovieSerializer(object, many=True)
@@ -23,7 +22,6 @@ class MovieList(APIView):
 
 
 class MovieDetail(APIView):
-
     def get_object(self, pk):
         obj = get_object_or_404(Movies, pk=pk)
         return obj
@@ -40,4 +38,3 @@ class MovieDetail(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-

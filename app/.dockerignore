@@ -2,3 +2,5 @@ env
 .dockerignore
 Dockerfile
 Dockerfile.prod
+app/htmlcov/index.html
+.coverage
