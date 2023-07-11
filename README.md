@@ -5,7 +5,7 @@ This project is a part of the course: https://testdriven.io/courses/tdd-django/.
 
 - Django app with several endpoints and tests. 
 - docker compose starts two containers. First one with my Django app. Second with Postres. 
-- Project was deployed to Heroku: https://whispering-fortress-58832.herokuapp.com/api/movies/, https://whispering-fortress-58832.herokuapp.com/api/movies/2/, ... 
+- Project was deployed to Heroku (link does not work now): https://whispering-fortress-58832.herokuapp.com/api/movies/, https://whispering-fortress-58832.herokuapp.com/api/movies/2/, ... 
 - to test endpoints in Heroku use http: 
 - http GET https://whispering-fortress-58832.herokuapp.com/api/movies/
 - http GET https://whispering-fortress-58832.herokuapp.com/api/movies/1/
